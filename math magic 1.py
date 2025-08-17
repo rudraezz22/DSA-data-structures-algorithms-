@@ -1,5 +1,30 @@
 
+#armstrong number
 
+number = int(input("enter ur number"))
+digit = len(str(number))
+result = 0
+
+temp = number
+
+while temp>0:
+    remain = temp%10 
+    result += remain**digit
+    temp = int(temp/10) #or //10
+
+if result == number:
+    print("this is an armstrong number")
+else:
+    print("its not an armstrong number")
+
+
+#factors:
+
+n = int(input("enter ur number"))
+
+for i in range(1,n+1):
+    if n%i == 0:
+        print(i)
 
 #roman numbers
 
@@ -15,3 +40,4 @@ for i in range(0,len(n)-1):
        result+=dict[n[i]]
 
 print(f"{result+dict[n[-1]]}")
+
