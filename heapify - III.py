@@ -1,0 +1,23 @@
+
+
+#heapify 
+def heapify1(arr,n,i):
+    largest = i
+    
+    l =2*i+1
+    r = 2*i+2
+
+    if l<n and arr[i]<arr[l]:
+        largest = l
+    if r<n and arr[largest]<arr[r]:
+        largest = r
+
+    if largest!=i:
+        arr[i],arr[largest] = arr[largest],arr[i]
+        heapify1(arr,n,largest)
+
+arr1 = [3,4,12,1,41]
+n = len(arr1)
+for i in range(n,-1,-1):
+    heapify1(arr1,n,i)
+print(arr1)
